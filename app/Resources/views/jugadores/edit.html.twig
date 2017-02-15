@@ -1,0 +1,52 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    <div class="container">
+    <h1>Editar Jugador</h1>
+    <div class="col-xs-3">
+        <p>
+            {{ form_label(edit_form.nombre, 'Nombre:', {'label_attr': {'class': ''}}) }}
+        </p>
+        {{ form_errors(edit_form.nombre) }}
+        {{ form_widget(edit_form.nombre, {'attr': {'class': 'form-control'}}) }}
+    </div>
+
+    <div class="col-xs-3">
+        <p>
+            {{ form_label(edit_form.apellidos, 'Apellidos:', {'label_attr': {'class': ''}}) }}
+        </p>
+        {{ form_errors(edit_form.apellidos) }}
+        {{ form_widget(edit_form.apellidos, {'attr': {'class': 'form-control'}}) }}
+    </div>
+
+    <div class="col-xs-3">
+        <p>
+            {{ form_label(edit_form.posicion, 'Posicion:', {'label_attr': {'class': ''}}) }}
+        </p>
+        {{ form_errors(edit_form.posicion) }}
+        {{ form_widget(edit_form.posicion, {'attr': {'class': 'form-control'}}) }}
+    </div>
+
+    <div class="col-xs-3">
+        <p>
+            {{ form_label(edit_form.equipo, 'Equipo:', {'label_attr': {'class': ''}}) }}
+        </p>
+        {{ form_errors(edit_form.equipo) }}
+        {{ form_widget(edit_form.equipo, {'attr': {'class': 'form-control'}}) }}
+    </div>
+
+    <div>
+        {{ form_start(edit_form) }}
+        <input class="btn btn-default" type="submit" value="Actualizar">
+        {{ form_end(edit_form) }}
+    </div>
+
+    <div>
+        {{ form_start(delete_form) }}
+                <input class="btn btn-default" type="submit" value="Borrar">
+            {{ form_end(delete_form) }}
+    </div>
+    <a id="insertar" href="{{ path('jugadores_index') }}">Back to the list</a>
+</div>
+{% endblock %}

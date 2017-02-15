@@ -1,0 +1,15 @@
+auc:
+    resource: "@AUCBundle/Resources/config/routing.yml"
+    prefix:   /
+
+jugadores:
+    resource: "@AUCBundle/Resources/config/routing/jugadores.yml"
+    prefix:   /admin/jugadores
+
+entrenadores:
+    resource: "@AUCBundle/Resources/config/routing/entrenadores.yml"
+    prefix:   /admin/entrenadores
+
+app:
+    resource: "@AppBundle/Controller/"
+    type:     annotation

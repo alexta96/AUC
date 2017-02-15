@@ -1,0 +1,51 @@
+auc_homepage:
+    path:     /
+    defaults: { _controller: AUCBundle:Default:all }
+
+auc_futbol_convencional:
+    path:     /futbol_convencional
+    defaults: { _controller: AUCBundle:Default:futbolconvencional }
+
+auc_futbol_silla:
+    path:     /futbol_silla_ruedas
+    defaults: { _controller: AUCBundle:Default:futbolsilla }
+
+auc_extra:
+    path:     /actividades_extra
+    defaults: { _controller: AUCBundle:Default:extra }
+
+auc_futbol_once:
+    path:     /futbol/once
+    defaults: { _controller: AUCBundle:Default:futbolonce }
+
+auc_equipo:
+    path:     /futbol/equipo/{id_equipo}
+    defaults: { _controller: AUCBundle:Equipos:equipo, id_equipo:1 }
+
+auc_noticia:
+    path:     /noticia/{id}
+    defaults: { _controller: AUCBundle:Default:noticia }
+
+auc_register_admin:
+    path:     /admin/register
+    defaults: { _controller: AUCBundle:Admin:register }
+
+auc_login_admin:
+    path:     /admin
+    defaults: { _controller: AUCBundle:Admin:login }
+
+auc_logout_admin:
+    path:     /admin/logout
+
+auc_contacto:
+    path:     /contacto
+    defaults: { _controller: AUCBundle:Default:contacto }
+
+auc_quienes:
+    path:     /nosotros
+    defaults: { _controller: AUCBundle:Default:nosotros }
+
+auc_adaptado:
+    path:     /futbol_adaptado
+    defaults: { _controller: AUCBundle:Default:adaptado }
+

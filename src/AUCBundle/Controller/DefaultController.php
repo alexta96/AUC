@@ -19,6 +19,14 @@ class DefaultController extends Controller
     {
         return $this->render('AUCBundle:Default:futbolonce.html.twig');
     }
+    public function futbolochoAction()
+    {
+        return $this->render('AUCBundle:Default:futbolocho.html.twig');
+    }
+    public function futbolfemeninoAction()
+    {
+        return $this->render('AUCBundle:Default:futbolfemenino.html.twig');
+    }
     public function futbolsillaAction()
     {
         return $this->render('AUCBundle:Default:futbolsilla.html.twig');

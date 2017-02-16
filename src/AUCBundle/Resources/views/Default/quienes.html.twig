@@ -1,8 +1,7 @@
 {% extends '::base.html.twig' %}
 {% block body %}
-<div id="fh5co-contact" class="fh5co-section-gray">
 <div class="container">
-  <div id="tablaQuienes" class="background">
+  <div id="tablaQuienes" class="background animate-box">
     <div id="dentroTabla">
         <h3 id="tituloTablaQuienes">QUIENES SOMOS</h3>
             <hr><br>
@@ -19,14 +18,17 @@
   <div class="col-md-8 col-md-offset-2 text-center heading-section animate-box">
       <h3>Directiva</h3>
   </div>
-  <div align="center">
+  <div class="container">
+
+  <div class="col-md-12 col-md-offset-2">
     <img id="img-responsive" src="http://static.wixstatic.com/media/c38e51_573620b723f24cbc8b9a61912b48fc11~mv2.jpg_srz_672_306_85_22_0.50_1.20_0.00_jpg_srz"
-    alt="FotoDirectiva" class="img-thumbnail" >
+    alt="FotoDirectiva" class="img-thumbnail animate-box" >
+  </div>
   </div>
   <div>
-    <hr>
+    <hr class="animate-box">
   </div>
-  <div class="wrapper" id="wrapper">
+  <div class="wrapper animate-box" id="wrapper">
     <section class="gallery" id="gallery">
       <div class="container">
         <div id="grid-gallery" class="grid-gallery">
@@ -35,33 +37,31 @@
               <li class="grid-sizer"></li><!-- for Masonry column width -->
               <li>
                 <figure>
-                  <img src="https://pbs.twimg.com/profile_images/795538317211299844/ShNKtUmK_400x400.jpg" alt="Vicepresidente" id="img-responsive" class="imgFueraQuienes"/>
+                  <img src="https://pbs.twimg.com/profile_images/795538317211299844/ShNKtUmK_400x400.jpg" alt="Vicepresidente" class="img-responsive-person"/>
                   <figcaption>
                     <h3>
                       <b>VICEPRESIDENTE</b>
                     </h3>
-                    <p>Para más información pulsa sobre la imagen.</p></figcaption>
-                  </figure>
-                </li>
-                <li>
-                  <figure>
-                    <img src="http://st-listas.20minutos.es/images/2011-12/311753/3275034_640px.jpg?1322695274" alt="Presidente" id="img-responsive" class="imgFueraQuienes"/>
-                    <figcaption>
-                      <h3>
-                        <b>PRESIDENTE</b>
-                      </h3>
-                      <p>Para más información pulsa sobre la imagen.</p>
                     </figcaption>
                   </figure>
                 </li>
                 <li>
                   <figure>
-                    <img src="http://st-listas.20minutos.es/images/2011-12/311753/3275034_640px.jpg?1322695274" alt="Secretaria" id="img-responsive" class="imgFueraQuienes"/>
+                    <img src="https://photos-2.dropbox.com/t/2/AAASTRIpqORvmUw6g6qH7ZkEF2Wm8xijJpEAvGKU5cXnwg/12/395338669/jpeg/32x32/3/1487214000/0/2/IMG_8676.jpg/EMjK1JMDGIwMIAcoBw/viLHH4e6Cs8HsNXNbWsl1kjSkj65vCMX4vP0ynPZDak?dl=0&size=1600x1200&size_mode=3" alt="Presidente" class="img-responsive-person"/>
+                    <figcaption>
+                      <h3>
+                        <b>PRESIDENTE</b>
+                      </h3>
+                    </figcaption>
+                  </figure>
+                </li>
+                <li>
+                  <figure>
+                    <img src="http://st-listas.20minutos.es/images/2011-12/311753/3275034_640px.jpg?1322695274" alt="Secretaria" class="img-responsive-person"/>
                     <figcaption>
                       <h3>
                         <b>SECRETARIA</b>
                       </h3>
-                      <p>Para más información pulsa sobre la imagen.</p>
                     </figcaption>
                   </figure>
                 </li>
@@ -73,8 +73,8 @@
               <ul>
                 <li>
                   <figure>
-                    <img src="images/toni.jpg" alt="Vicepresidente" id="imgQuienes"/>
-                    <figcaption class="inside">
+                    <img src="images/toni.jpg" alt="Presidente" class="img-responsive-script"/>
+                    <figcaption>
                       <h3 class="preguntas">
                         <b>Toni Sanchis Zafra</b>
                         <button type="button" class="btn btn-default btn-sm">
@@ -91,7 +91,7 @@
                 </li>
                 <li>
                   <figure>
-                    <img src="images/jose.jpg" alt="Presidente" id="imgQuienes"/>
+                    <img src="images/jose.jpg" alt="Presidente" class="img-responsive-script"/>
                     <figcaption>
                       <h3 class="preguntas">
                         <b>José Hernández</b>
@@ -111,7 +111,7 @@
                 </li>
                 <li>
                   <figure>
-                    <img src="http://static.wixstatic.com/media/c38e51_69bb974110414eb1a0319a704099c301.jpg_srz_208_235_85_22_0.50_1.20_0.00_jpg_srz" alt="Secretaria"  id="imgQuienes"/>
+                    <img src="http://static.wixstatic.com/media/c38e51_69bb974110414eb1a0319a704099c301.jpg_srz_208_235_85_22_0.50_1.20_0.00_jpg_srz" alt="Secretaria"  class="img-responsive-script"/>
                     <figcaption>
                       <h3 class="preguntas">
                         <b>Alba Sospedra</b>
@@ -139,7 +139,7 @@
         </div>
       </section>
       <div class="container">
-        <div id="tablaQuienes" class="background">
+        <div id="tablaQuienes" class="background animate">
           <div id="dentroTabla">
               <h3 id="tituloTablaQuienes">OBJETIVOS</h3>
                   <hr><br>
@@ -149,7 +149,6 @@
                        y psicológicas en cada una de las etapas evolutivas del jugador.</h4>
           </div>
         </div>
-      </div>
       </div>
       <!-- Script de quienes somos -->
       <script src="{{ asset('js/imgloaded.js') }}"></script>

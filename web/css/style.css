@@ -95,8 +95,9 @@ figure {
 #imgUnion{
   width: 25%;
   height: auto;
-  margin-left: 15%;
-  margin-top: -6.5%;
+  margin-right: 50%;
+  float: right;
+  margin-top: -5%;
 }
 
 
@@ -2080,4 +2081,5 @@ div.cs-select span {
   height: 300px;
   object-fit: cover;
   margin-bottom: 5%;
+  border-radius: 10px;
 }

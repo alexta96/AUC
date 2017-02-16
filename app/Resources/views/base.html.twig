@@ -51,31 +51,33 @@
             <div class="container">
                 <div class="nav-header">
                     <a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle dark"><i></i></a>
-                    <h1 id="fh5co-logo"><a href="{{ asset('/') }}"><img src="/images/logo.png" class="logo"></i>Athletic Unión Catarroja </a></h1>
+                    <h1 id="fh5co-logo"><a href="{{ url('auc_homepage') }}"><img src="/images/logo.png" class="logo"></i>Athletic Unión Catarroja </a></h1>
                     <!-- Empieza el menú -->
                     <nav id="fh5co-menu-wrap" role="navigation">
                         <ul class="sf-menu" id="fh5co-primary-menu">
                             <li>
                                 <a href="#" class="fh5co-sub-ddown">Fútbol</a>
                                 <ul class="fh5co-sub-menu">
-                                    <li><a href="{{ asset('futbol_convencional') }}">Fútbol convencional</a></li>
-                                    <li><a href="{{ asset('futbol_adaptado') }}">Futbol adaptado</a></li>
-                                    <li><a href="{{ asset('futbol_silla_ruedas') }}">Futbol silla de ruedas</a></li>
+                                    <li><a href="{{ url('auc_futbol_convencional') }}">Fútbol convencional</a></li>
+                                    <li><a href="{{ url('auc_adaptado') }}">Futbol adaptado</a></li>
+                                    <li><a href="{{ url('auc_futbol_silla') }}">Futbol silla de ruedas</a></li>
                                 </ul>
                             </li>
                             <li>
-                                <a href="{{ asset('actividades_extra') }}">Actividades extra</a>
+                                <a href="{{ url('auc_extra') }}">Actividades extra</a>
                             </li>
-                            <li><a href="{{ asset('nosotros') }}">Quienes somos</a></li>
-                            <li><a href="{{ asset('contacto') }}">Contacto</a></li>
+                            <li><a href="{{ url('auc_quienes') }}">Quienes somos</a></li>
+                            <li><a href="{{ url('auc_contacto') }}">Contacto</a></li>
                     </nav>
                 </div>
             </div>
         </header>
 
             <!-- Final del header -->
-
+            
+            <div class="fh5co-section-gray">
             {% block body %}{% endblock %}
+            </div>
 
         <footer>
             <div id="footer">

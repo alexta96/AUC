@@ -1,6 +1,6 @@
 {% extends '::base.html.twig' %}
 {% block body %}
-<div id="fh5co-tours" class="fh5co-section-gray">
+<div id="fh5co-tours">
 	<div class="row">
 		<div class="col-md-8 col-md-offset-2 text-center heading-section animate-box">
 			<h3>Fútbol convencional</h3>
@@ -9,37 +9,33 @@
 	</div>
 	<div class="row">
 		<div class="col-md-4 col-sm-6 fh5co-tours animate-box" data-animate-effect="fadeIn">
-			<div href="#"><img src="images/futbol11.jpg" class="img-responsive">
+			<div href="#"><img src="https://cdn.pixabay.com/photo/2017/02/06/11/20/goal-2042584_960_720.jpg" class="img-responsive">
 				<div class="desc">
 					<h3>Fútbol 11</h3>
 					<span>Desde los 13 años </span>
-					<a class="btn btn-primary btn-outline" href="{{ asset('futbol/once') }}" >Más información <i class="icon-arrow-right22"></i></a>
+					<a class="btn btn-primary btn-outline" href="{{ url('auc_futbol_once') }}" >Ver Equipos <i class="icon-arrow-right22"></i></a>
 				</div>
 			</div>
 		</div>
 		<div class="col-md-4 col-sm-6 fh5co-tours animate-box" data-animate-effect="fadeIn">
-			<div href="#"><img src="images/futbol11.jpg" class="img-responsive">
+			<div href="#"><img src="https://cdn.pixabay.com/photo/2017/02/06/11/20/goal-2042584_960_720.jpg" class="img-responsive">
 				<div class="desc">
 					<h3>Fútbol 8</h3>
 					<span> Desde los 5 años </span>
-					<a class="btn btn-primary btn-outline" href="{{ asset('futbol/ocho') }}" > Más información <i class="icon-arrow-right22"></i></a>
+					<a class="btn btn-primary btn-outline" href="{{ url('auc_futbol_ocho') }}" > Ver Equipos <i class="icon-arrow-right22"></i></a>
 				</div>
 			</div>
 		</div>
 		<div class="col-md-4 col-sm-6 fh5co-tours animate-box" data-animate-effect="fadeIn">
-			<div href="#"><img src="images/futbol8.jpg" class="img-responsive">
+			<div href="#"><img src="https://cdn.pixabay.com/photo/2017/02/06/11/20/goal-2042584_960_720.jpg" class="img-responsive">
 				<div class="desc">
 					<h3>Fútbol femenino</h3>
 					<span>Cualquier edad</span>
-					<a class="btn btn-primary btn-outline" href="futbolFemenino.html">Más información<i class="icon-arrow-right22"></i></a>
+					<a class="btn btn-primary btn-outline" href="{{ url('auc_futbol_femenino') }}">Ver Equipos<i class="icon-arrow-right22"></i></a>
 				</div>
 			</div>
 		</div>
-
-		<div class="col-md-12 text-center animate-box">
-			<p><a class="btn btn-primary btn-outline btn-lg" href="{{ asset('/contacto') }}">Contacta con nosotros <i class="icon-arrow-right22"></i></a></p>
-		</div>
 	</div>
-</div>
+	</div>
 
 {% endblock %}

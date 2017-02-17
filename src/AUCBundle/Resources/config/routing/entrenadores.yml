@@ -21,4 +21,4 @@ entrenadores_edit:
 entrenadores_delete:
     path:     /{id}/delete
     defaults: { _controller: "AUCBundle:entrenadores:delete" }
-    methods:  DELETE
+    methods:  [GET, POST]

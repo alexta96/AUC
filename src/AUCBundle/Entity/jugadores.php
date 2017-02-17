@@ -27,7 +27,6 @@ class jugadores
      *
      * @ORM\Column(name="nombre", type="string", length=255)
      *
-     * @Assert\NotBlank()
      *
      */
     private $nombre;
@@ -37,7 +36,6 @@ class jugadores
      *
      * @ORM\Column(name="apellidos", type="string", length=255)
      *
-     * @Assert\NotBlank()
      *
      */
     private $apellidos;
@@ -47,7 +45,6 @@ class jugadores
      *
      * @ORM\Column(name="posicion", type="string", length=255)
      *
-     * @Assert\NotBlank()
      *
      */
     private $posicion;

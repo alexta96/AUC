@@ -33,7 +33,7 @@ class entrenadoresController extends Controller
      */
     public function newAction(Request $request)
     {
-        $entrenadore = new entrenadores();
+        $entrenadores = new entrenadores();
         $form = $this->createForm('AUCBundle\Form\entrenadoresType', $entrenadores);
         $form->handleRequest($request);
 
@@ -42,11 +42,12 @@ class entrenadoresController extends Controller
             $em->persist($entrenadores);
             $em->flush($entrenadores);
 
-            return $this->redirectToRoute('entrenadores_show', array('id' => $entrenadore->getId()));
+
+            return $this->redirectToRoute('entrenadores_show', array('id' => $entrenadores->getId()));
         }
 
         return $this->render('entrenadores/new.html.twig', array(
-            'entrenadore' => $entrenadores,
+            'entrenadores' => $entrenadores,
             'form' => $form->createView(),
         ));
     }

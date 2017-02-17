@@ -14,18 +14,6 @@ auc_extra:
     path:     /actividades
     defaults: { _controller: AUCBundle:Default:extra }
 
-auc_futbol_once:
-    path:     /futbol_once
-    defaults: { _controller: AUCBundle:Default:futbolonce }
-
-auc_futbol_ocho:
-    path:     /futbol_ocho
-    defaults: { _controller: AUCBundle:Default:futbolocho }
-
-auc_futbol_femenino:
-    path:     /futbol_femenino
-    defaults: { _controller: AUCBundle:Default:futbolfemenino }
-
 auc_equipo:
     path:     /futbol/equipo/{id_equipo}
     defaults: { _controller: AUCBundle:Equipos:equipo, id_equipo:1 }

@@ -38,7 +38,7 @@ class equipos
     /**
      * @ORM\OneToMany(targetEntity="jugadores", mappedBy="equipo", fetch="EAGER")
      */
-        private $jugador;
+    private $jugador;
 
 
     /**
@@ -125,29 +125,6 @@ class equipos
         return $this->jugador;
     }
 
-    /**
-     * Set entrenador
-     *
-     * @param \AUCBundle\Entity\entrenadores $entrenador
-     *
-     * @return equipos
-     */
-    public function setEntrenador(\AUCBundle\Entity\entrenadores $entrenador = null)
-    {
-        $this->entrenador = $entrenador;
-
-        return $this;
-    }
-
-    /**
-     * Get entrenador
-     *
-     * @return \AUCBundle\Entity\entrenadores
-     */
-    public function getEntrenador()
-    {
-        return $this->entrenador;
-    }
 
     /**
      * Set imagen
@@ -171,5 +148,54 @@ class equipos
     public function getImagen()
     {
         return $this->imagen;
+    }
+
+    /**
+     * Add entrenador
+     *
+     * @param \AUCBundle\Entity\entrenadores $entrenador
+     *
+     * @return equipos
+     */
+    public function addEntrenador(\AUCBundle\Entity\entrenadores $entrenador)
+    {
+        $this->entrenador[] = $entrenador;
+
+        return $this;
+    }
+
+    /**
+     * Remove entrenador
+     *
+     * @param \AUCBundle\Entity\entrenadores $entrenador
+     */
+    public function removeEntrenador(\AUCBundle\Entity\entrenadores $entrenador)
+    {
+        $this->entrenador->removeElement($entrenador);
+    }
+
+
+    /**
+     * Get entrenador
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getEntrenador()
+    {
+        return $this->entrenador;
+    }
+
+    /**
+     * Set entrenador
+     *
+     * @param \AUCBundle\Entity\entrenadores $entrenador
+     *
+     * @return equipos
+     */
+    public function setEntrenador(\AUCBundle\Entity\entrenadores $entrenador = null)
+    {
+        $this->entrenador = $entrenador;
+
+        return $this;
     }
 }

@@ -24,14 +24,14 @@ class noticias
     /**
      * @var string
      *
-     * @ORM\Column(name="titulo", type="string", length=255)
+     * @ORM\Column(name="titulo", type="string", length=40)
      */
     private $titulo;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="subtitulo", type="string", length=255)
+     * @ORM\Column(name="subtitulo", type="string", length=60)
      */
     private $subtitulo;
 

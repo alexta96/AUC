@@ -6,7 +6,6 @@ use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
-use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 
 class entrenadoresType extends AbstractType
 {
@@ -24,8 +23,7 @@ class entrenadoresType extends AbstractType
                 // query choices from this entity
                 'class' => 'AUCBundle:equipos',
                 // use the User.username property as the visible option string
-                'choice_label' => 'nombre'))
-                ->add('Crear', SubmitType::class);;
+                'choice_label' => 'nombre'));
     }
     
     /**

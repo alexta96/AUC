@@ -3,7 +3,6 @@
 namespace AUCBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
-use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * entrenadores
@@ -27,7 +26,6 @@ class entrenadores
      *
      * @ORM\Column(name="nombre", type="string", length=255)
      *
-     * @Assert\NotBlank()
      *
      */
     private $nombre;
@@ -37,7 +35,6 @@ class entrenadores
      *
      * @ORM\Column(name="titulaciones", type="string", length=255)
      *
-     * @Assert\NotBlank()
      *
      */
     private $titulaciones;
@@ -47,7 +44,6 @@ class entrenadores
      *
      * @ORM\Column(name="apellidos", type="string", length=255)
      *
-     * @Assert\NotBlank()
      *
      */
     private $apellidos;
@@ -57,7 +53,6 @@ class entrenadores
      *
      * @ORM\Column(name="telefono1", type="string", length=12)
      *
-     * @Assert\NotBlank()
      *
      */
     private $telefono1;
@@ -174,7 +169,48 @@ class entrenadores
     {
         return $this->telefono1;
     }
-    
+
+    /**
+     * Add equipo
+     *
+     * @param \AUCBundle\Entity\equipos $equipo
+     *
+     * @return entrenadores
+     */
+    public function addEquipo(\AUCBundle\Entity\equipos $equipo)
+    {
+        $this->equipo[] = $equipo;
+
+        return $this;
+    }
+
+    /**
+     * Remove equipo
+     *
+     * @param \AUCBundle\Entity\equipos $equipo
+     */
+    public function removeEquipo(\AUCBundle\Entity\equipos $equipo)
+    {
+        $this->equipo->removeElement($equipo);
+    }
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->equipo = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
+
+    /**
+     * Get equipo
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getEquipo()
+    {
+        return $this->equipo;
+    }
 
     /**
      * Set equipo
@@ -188,15 +224,5 @@ class entrenadores
         $this->equipo = $equipo;
 
         return $this;
-    }
-
-    /**
-     * Get equipo
-     *
-     * @return \AUCBundle\Entity\equipos
-     */
-    public function getEquipo()
-    {
-        return $this->equipo;
     }
 }

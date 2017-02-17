@@ -24,14 +24,14 @@ class noticias
     /**
      * @var string
      *
-     * @ORM\Column(name="titulo", type="string", length=255)
+     * @ORM\Column(name="titulo", type="string", length=40)
      */
     private $titulo;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="subtitulo", type="string", length=255)
+     * @ORM\Column(name="subtitulo", type="string", length=60)
      */
     private $subtitulo;
 
@@ -129,5 +129,29 @@ class noticias
     public function getDescripcion()
     {
         return $this->descripcion;
+    }
+
+    /**
+     * Set imagen
+     *
+     * @param string $imagen
+     *
+     * @return noticias
+     */
+    public function setImagen($imagen)
+    {
+        $this->imagen = $imagen;
+
+        return $this;
+    }
+
+    /**
+     * Get imagen
+     *
+     * @return string
+     */
+    public function getImagen()
+    {
+        return $this->imagen;
     }
 }

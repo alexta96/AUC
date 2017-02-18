@@ -2,13 +2,21 @@ auc:
     resource: "@AUCBundle/Resources/config/routing.yml"
     prefix:   /
 
-jugadores:
-    resource: "@AUCBundle/Resources/config/routing/jugadores.yml"
+jugador:
+    resource: "@AUCBundle/Resources/config/routing/jugador.yml"
     prefix:   /admin/jugadores
 
-entrenadores:
-    resource: "@AUCBundle/Resources/config/routing/entrenadores.yml"
+entrenador:
+    resource: "@AUCBundle/Resources/config/routing/entrenador.yml"
     prefix:   /admin/entrenadores
+
+noticia:
+    resource: "@AUCBundle/Resources/config/routing/noticia.yml"
+    prefix:   /admin/noticias
+
+equipo:
+    resource: "@AUCBundle/Resources/config/routing/equipo.yml"
+    prefix:   /admin/equipos
 
 app:
     resource: "@AppBundle/Controller/"

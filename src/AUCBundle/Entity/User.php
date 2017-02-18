@@ -4,7 +4,6 @@ namespace AUCBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Security\Core\User\UserInterface;
-use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * User
@@ -51,6 +50,8 @@ class User implements UserInterface
      */
     private $roles = array();
 
+    private $plainPassword;
+
 
     /**
      * Get id
@@ -61,8 +62,6 @@ class User implements UserInterface
     {
         return $this->id;
     }
-
-    private $plainPassword;
 
     public function getPlainPassword()
     {
@@ -159,9 +158,9 @@ class User implements UserInterface
         return $this;
     }
 
-    public function getRoles() 
-    { 
-    
+    public function getRoles()
+    {
+
         return $this->roles;
     }
 

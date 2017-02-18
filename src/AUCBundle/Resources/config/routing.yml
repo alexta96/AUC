@@ -16,14 +16,14 @@ auc_extra:
 
 auc_equipo:
     path:     /futbol/equipo/{id_equipo}
-    defaults: { _controller: AUCBundle:Equipos:equipo, id_equipo:1 }
+    defaults: { _controller: AUCBundle:Equipo:plantilla, id_equipo:1 }
 
 auc_noticia:
     path:     /noticia/{id}
-    defaults: { _controller: AUCBundle:Default:noticia }
+    defaults: { _controller: AUCBundle:Noticia:noticia}
 
 auc_register_admin:
-    path:     /admin/register
+    path:     admin/register
     defaults: { _controller: AUCBundle:Admin:register }
 
 auc_login_admin:
@@ -44,4 +44,3 @@ auc_quienes:
 auc_adaptado:
     path:     /futbol_adaptado
     defaults: { _controller: AUCBundle:Default:adaptado }
-

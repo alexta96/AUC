@@ -1,6 +1,6 @@
 auc_homepage:
     path:     /
-    defaults: { _controller: AUCBundle:Default:all }
+    defaults: { _controller: AUCBundle:Noticia:all }
 
 auc_futbol_convencional:
     path:     /futbol_convencional

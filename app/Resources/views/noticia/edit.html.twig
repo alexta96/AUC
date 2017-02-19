@@ -34,27 +34,34 @@
         <div>
           <P>
             {{ form_errors(edit_form.descripcion) }}
-            {{ form_widget(edit_form.descripcion, {'attr': {'class': 'form-control','placeholder': 'Descripcion'}}) }}
+            {{ form_widget(edit_form.descripcion, {'attr': {'class': 'form-control','rows': '10','placeholder': 'Descripcion'}}) }}
           </p>
         </div>
 
         <div>
           <p>
             {{ form_errors(edit_form.imagen) }}
-            {{ form_widget(edit_form.imagen, {'attr': {'class': 'form-control','placeholder': 'URL de la imagen'}}) }}
+            {{ form_widget(edit_form.imagen, {'attr': {'class': 'form-control','rows': '2','placeholder': 'URL de la imagen'}}) }}
           </p>
         </div>
         <div class="container">
           <div class="row">
-            <div>
-
+            <div id="margenbot">
+            <div class="editarboton">
             <input class="btn btn-success" type="submit" value="Editar" />
             {{ form_end(edit_form) }}
-            
+            </div>
+
+            <div class="eliminarboton">
             {{ form_start(delete_form) }}
                 <input class="btn btn-danger"type="submit" value="Eliminar">
+            </div>
+
+            <div class="volverboton">
             {{ form_end(delete_form) }}
             <a href="{{ path('noticia_index') }}"><input class="btn btn-default" type="submit" value="Volver" /></a>
+          </div>
+            </div>
 
           </div>
         </div>

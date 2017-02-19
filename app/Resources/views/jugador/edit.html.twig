@@ -41,17 +41,22 @@
         <P>
         <div class="container">
           <div class="row">
-            <div>
-
+            <div id="margenbot">
+            <div class="editarboton">
             <input class="btn btn-success" type="submit" value="Editar" />
             {{ form_end(edit_form) }}
+            </div>
 
+            <div class="eliminarboton">
             {{ form_start(delete_form) }}
                 <input class="btn btn-danger"type="submit" value="Eliminar">
+            </div>
+
+            <div class="volverboton">
             {{ form_end(delete_form) }}
             <a href="{{ path('jugador_index') }}"><input class="btn btn-default" type="submit" value="Volver" /></a>
-
           </div>
+            </div>
         </div>
       </div>
     </p>

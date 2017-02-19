@@ -6,6 +6,7 @@ use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
+use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 
 class JugadorType extends AbstractType
@@ -16,8 +17,8 @@ class JugadorType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('nombre')
-            ->add('apellidos')
+            ->add('nombre', TextType::class)
+            ->add('apellidos', TextType::class)
             ->add('posicion', ChoiceType::class, array(
                   'choices' => array(
                     'Portero' => 'Portero' ,

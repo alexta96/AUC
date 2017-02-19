@@ -36,4 +36,11 @@ class DefaultController extends Controller
     {
         return $this->render('AUCBundle:Default:futboladaptado.html.twig');
     }
+
+    public function allAction()
+    {
+        $repository = $this->getDoctrine()->getRepository('AUCBundle:Noticia');
+        $noticias = $repository->findAll();
+        return $this->render('AUCBundle:Default:index.html.twig', array("noticias"=>$noticias));
+    }
 }

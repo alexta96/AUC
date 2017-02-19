@@ -42,7 +42,7 @@ class EntrenadorController extends Controller
             $em->persist($entrenador);
             $em->flush($entrenador);
 
-            return $this->redirectToRoute('entrenador_show', array('id' => $entrenador->getId()));
+            return $this->redirectToRoute('entrenador_index', array('id' => $entrenador->getId()));
         }
 
         return $this->render('entrenador/new.html.twig', array(

@@ -461,9 +461,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#83b1f7', end
 #fh5co-logo a {
   color: #004D7A;
 }
-#fh5co-logo a:hover, #fh5co-logo a:focus {
+/*#fh5co-logo a:hover, #fh5co-logo a:focus {
   color: rgba(0, 0, 0, 0.5) !important;
-}
+}*/
 
 #fh5co-menu-wrap {
   position: relative;
@@ -2082,4 +2082,24 @@ div.cs-select span {
   object-fit: cover;
   margin-bottom: 5%;
   border-radius: 10px;
+}
+
+.editarboton{
+  float: left;
+  margin-right: 1%;
+}
+
+.eliminarboton{
+  float: inherit;
+
+}
+
+.volverboton{
+  float: inherit;
+  margin-top: 1%;
+
+}
+
+#margenbot{
+margin-bottom: 3%;
 }

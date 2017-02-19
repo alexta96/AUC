@@ -42,7 +42,7 @@ class NoticiaController extends Controller
             $em->persist($noticia);
             $em->flush($noticia);
 
-            return $this->redirectToRoute('noticia_show', array('id' => $noticia->getId()));
+            return $this->redirectToRoute('noticia_index', array('id' => $noticia->getId()));
         }
 
         return $this->render('noticia/new.html.twig', array(
@@ -60,7 +60,7 @@ class NoticiaController extends Controller
         $deleteForm = $this->createDeleteForm($noticia);
 
         return $this->render('noticia/show.html.twig', array(
-            'noticium' => $noticia,
+            'noticia' => $noticia,
             'delete_form' => $deleteForm->createView(),
         ));
     }

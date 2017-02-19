@@ -42,7 +42,7 @@ class JugadorController extends Controller
             $em->persist($jugador);
             $em->flush($jugador);
 
-            return $this->redirectToRoute('jugador_show', array('id' => $jugador->getId()));
+            return $this->redirectToRoute('jugador_index', array('id' => $jugador->getId()));
         }
 
         return $this->render('jugador/new.html.twig', array(

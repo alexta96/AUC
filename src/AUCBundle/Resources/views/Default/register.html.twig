@@ -1,4 +1,7 @@
 <style type="text/css">
+    *{
+      font-family: 'Source Sans Pro', sans-serif;
+    }
     #login {
         padding-top: 50px
     }
@@ -32,7 +35,6 @@
         margin: 1px 0 0 3px;
         position: absolute;
         pointer-events: none;
-        font-family: 'Glyphicons Halflings';
     }
     #login .checkbox .character-checkbox {
         width: 25px;
@@ -90,7 +92,7 @@
     }
 </style>
 
-
+<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
 
@@ -132,7 +134,8 @@
                         </form>
                     </div>
 
-                    <p><a class="forget" href="{{asset('/admin')}}">¿Tienes ya una cuenta? Iniciar sesión</a></p>
+                    <p><a class="forget" href="{{url('auc_homepage')}}">Volver a inicio</a></p>
+                    <hr>
                 </div>
             </div>
         </div>

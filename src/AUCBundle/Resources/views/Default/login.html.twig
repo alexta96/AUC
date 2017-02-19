@@ -7,6 +7,9 @@
     /*    --------------------------------------------------
     :: Login Section
     -------------------------------------------------- */
+*{
+  font-family: 'Source Sans Pro', sans-serif;
+}
 #login {
     padding-top: 50px
 }
@@ -40,7 +43,7 @@
     margin: 1px 0 0 3px;
     position: absolute;
     pointer-events: none;
-    font-family: 'Glyphicons Halflings';
+
 }
 #login .checkbox .character-checkbox {
     width: 25px;
@@ -98,6 +101,7 @@
 }
 </style>
 
+<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <form action="{{ path('auc_login_admin') }}" method="post">
 
@@ -131,6 +135,7 @@
         <div class="row">
             <div class="col-xs-12">
                 <p>Athletic Union Catarroja © - 2017</p>
+                <hr>
             </div>
         </div>
     </div>

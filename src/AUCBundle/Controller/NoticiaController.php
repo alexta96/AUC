@@ -136,4 +136,26 @@ class NoticiaController extends Controller
 
         return $this->render('AUCBundle:Default:noticia.html.twig', array("noticias"=> $noticias));
     }
+
+    public function listAction(Request $request)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $noticias = $em->getRepository('AUCBundle:Noticia')->findAll();
+        //$dql= "SELECT * FROM AUCBundle:Noticia n ORDER BY id DESC"
+        //$query= $em->createQuery($dql);
+
+        /**
+        *@ var $paginator \Knp\Component\Pager\Paginator
+        */
+
+        $paginator  = $this->get('knp_paginator');
+        $noticias = $paginator->paginate(
+            $noticias, /* query NOT result */
+            $request->query->getInt('page', 1)/*page number*/,
+            $request->query->getInt('limit', 6)/*limit per page*/
+        );
+
+        // parameters to template
+        return $this->render('AUCBundle:Default:index.html.twig', array('noticias' => $noticias));
+    }
 }

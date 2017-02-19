@@ -26,11 +26,19 @@
       </p>
     </div>
 
-    <div class="col-md-offset-9">
-      <P>
+    <div class="container">
+      <div class="row">
+        <div id="margenbot">
+      <div class="editarboton">
         <input class="btn btn-success" type="submit" value="Crear" />
-        <P>
-        </div>
+      </div>
+
+        <div class="volverboton">
+        <a href="{{ url('equipo_index') }}"><input class="btn btn-default" type="button" value="Volver" /></a>
+      </div>
+    </div>
+  </div>
+</div>
       </div>
 
       {{ form_end(form) }}

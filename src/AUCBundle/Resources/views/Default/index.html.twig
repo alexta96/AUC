@@ -46,10 +46,11 @@
                 </div>
             </div>
             <!-- Final del slaider -->
+            <div id="fh5co-tours">
             <div class="col-md-8 col-md-offset-2 text-center heading-section animate-box">
                 <h3>Noticias</h3>
             </div>
-            <div id="fh5co-tours" class="fh5co-section-gray">
+
                 <div class="row">
                     <div class="col-md-8">
                         {% for noticias in noticias %}
@@ -70,6 +71,9 @@
                         width="340" height="558" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" id="facebook"></iframe>
                          </div>
                      </div>
+                     <div class="navigation animate-box col-md-offset-3">
+                        {{ knp_pagination_render(noticias) }}
+                      </div>
                 </div>  <!--  Fin row -->
             </div>      <!-- fh5co-blog-section -->
         </div>

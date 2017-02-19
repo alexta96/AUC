@@ -21,9 +21,9 @@ class NoticiaType extends AbstractType
             ->add('descripcion')
             ->add('imagen')
             ->add('fecha', DateType::class, array(
-              'widget' => 'single_text',
+              'widget' => 'choice',
     // this is actually the default format for single_text
-              'format' => 'yyyy-MM-dd',));        ;
+              'format' => 'yyyy-MM-dd',))        ;
     }
 
     /**

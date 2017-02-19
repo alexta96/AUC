@@ -57,9 +57,9 @@
                 <input class="btn btn-danger"type="submit" value="Eliminar">
             </div>
 
-            <div class="volverboton">
             {{ form_end(delete_form) }}
-            <a href="{{ path('noticia_index') }}"><input class="btn btn-default" type="submit" value="Volver" /></a>
+            <div class="volverboton">
+            <a href="{{ url('noticia_index') }}"><input class="btn btn-default" type="button" value="Volver" /></a>
           </div>
             </div>
 

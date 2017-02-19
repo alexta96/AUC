@@ -50,7 +50,7 @@ class Noticia
     private $imagen;
 
     /**
-     * @var \DateTime
+     * @var \Datetime
      *
      * @ORM\Column(name="fecha", type="datetime")
      */
@@ -185,29 +185,5 @@ class Noticia
     public function getFecha()
     {
         return $this->fecha;
-    }
-
-    /**
-     * Set mes
-     *
-     * @param string $mes
-     *
-     * @return Noticia
-     */
-    public function setMes($mes)
-    {
-        $this->mes = $mes;
-
-        return $this;
-    }
-
-    /**
-     * Get mes
-     *
-     * @return string
-     */
-    public function getMes()
-    {
-        return $this->mes;
     }
 }

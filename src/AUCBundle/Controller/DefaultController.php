@@ -11,10 +11,6 @@ class DefaultController extends Controller
     {
         return $this->render('AUCBundle:Default:index.html.twig');
     }
-    public function futbolconvencionalAction()
-    {
-        return $this->render('AUCBundle:Default:futbolconvencional.html.twig');
-    }
     public function futbolsillaAction()
     {
         return $this->render('AUCBundle:Default:futbolsilla.html.twig');

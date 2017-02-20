@@ -21,4 +21,4 @@ equipo_edit:
 equipo_delete:
     path:     /{id}/delete
     defaults: { _controller: "AUCBundle:Equipo:delete" }
-    methods:  DELETE
+    methods:  [GET, POST, DELETE]

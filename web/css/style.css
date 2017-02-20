@@ -42,7 +42,8 @@ hr{
 }
 
 #tituloTablaQuienes{
-  margin-left: 40%;
+  text-align: center;
+
 }
 #tablaQuienes{
   padding: 4%;
@@ -879,6 +880,7 @@ div.cs-select span {
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;
+  line-height: 35px;
 }
 .fh5co-tours > div .desc span {
   display: block;

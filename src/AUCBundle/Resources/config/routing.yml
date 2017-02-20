@@ -4,7 +4,7 @@ auc_homepage:
 
 auc_futbol_convencional:
     path:     /futbol_convencional
-    defaults: { _controller: AUCBundle:Default:futbolconvencional }
+    defaults: { _controller: AUCBundle:Equipo:all }
 
 auc_futbol_silla:
     path:     /futbol_silla_ruedas

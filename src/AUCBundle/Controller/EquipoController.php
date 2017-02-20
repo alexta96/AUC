@@ -94,7 +94,7 @@ class EquipoController extends Controller
      * Deletes a equipo entity.
      *
      */
-    public function deleteAction(Request $request, Equipo $equipo)
+    public function deleteAction(Request $request, Equipo $equipo, $id)
     {
         $form = $this->createDeleteForm($equipo);
         $form->handleRequest($request);
@@ -122,6 +122,13 @@ class EquipoController extends Controller
             ->setMethod('DELETE')
             ->getForm()
         ;
+    }
+
+    public function allAction()
+    {
+        $repository = $this->getDoctrine()->getRepository('AUCBundle:Equipo');
+        $equipos = $repository->findAll();
+        return $this->render('AUCBundle:Default:futbolconvencional.html.twig', array("equipos"=>$equipos));
     }
 
     public function plantillaAction($id_equipo)

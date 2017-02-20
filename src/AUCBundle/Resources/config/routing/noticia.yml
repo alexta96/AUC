@@ -21,4 +21,4 @@ noticia_edit:
 noticia_delete:
     path:     /{id}/delete
     defaults: { _controller: "AUCBundle:Noticia:delete" }
-    methods:  [GET, DELETE]
+    methods:  [GET, POST, DELETE]

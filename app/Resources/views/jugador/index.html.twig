@@ -25,8 +25,8 @@
                 <td>{{ jugador.apellidos }}</td>
                 <td>{{ jugador.posicion }}</td>
                 <td>
-                <a href="{{ path('jugador_edit', { 'id': jugador.id }) }}"><input class="btn btn-success btn-sm" type="button" value="Editar" /></a>
-                <a href="{{ path('jugador_delete', { 'id': jugador.id }) }}"><input class="btn btn-danger btn-sm" type="submit" value="Eliminar" /></a>
+                <a href="{{ path('jugador_edit', { 'id': jugador.id }) }}"><input class="btn btn-success btn-xs" type="button" value="Editar" /></a>
+                <a href="{{ path('jugador_delete', { 'id': jugador.id }) }}"><input class="btn btn-danger btn-xs" type="submit" value="Eliminar" /></a>
                 </td>
             </tr>
         {% endfor %}

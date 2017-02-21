@@ -7,6 +7,7 @@ use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
+use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 
 class EquipoType extends AbstractType
 {
@@ -17,7 +18,15 @@ class EquipoType extends AbstractType
   {
     $builder
     ->add('nombre', TextType::class)
-    ->add('imagen', TextareaType::class);
+    ->add('imagen', TextareaType::class)
+    ->add('entrenador',EntityType::class, array(
+            // query choices from this entity
+            'class' => 'AUCBundle:Entrenador',
+            // use the User.username property as the visible option string
+            'choice_label' => 'nombre',
+            'multiple'=>true
+          )
+          );
   }
 
   /**

@@ -20,11 +20,14 @@ class EntrenadorType extends AbstractType
             ->add('apellidos', TextType::class)
             ->add('titulaciones')
             ->add('telefono')
-            ->add('equipo', EntityType::class, array(
-                // query choices from this entity
-                'class' => 'AUCBundle:Equipo',
-                // use the User.username property as the visible option string
-                'choice_label' => 'nombre'));
+            ->add('equipo',EntityType::class, array(
+          // query choices from this entity
+          'class' => 'AUCBundle:Equipo',
+          // use the User.username property as the visible option string
+          'choice_label' => 'nombre',
+          'multiple'=>true
+        )
+        );
     }
 
     /**

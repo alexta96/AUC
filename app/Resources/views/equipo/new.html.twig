@@ -20,6 +20,13 @@
       </p>
     </div>
     <div>
+      <p>Elige entrenadores:</p>
+      <p>
+        {{ form_errors(form.entrenador) }}
+        {{ form_widget(form.entrenador, {'attr': {'class': 'form-control'}}) }}
+      </p>
+    </div>
+    <div>
       <P>
         {{ form_errors(form.imagen) }}
         {{ form_widget(form.imagen, {'attr': {'class': 'form-control','placeholder': 'URL de imagen'}}) }}

@@ -203,4 +203,9 @@ class Entrenador
     {
         return $this->equipo;
     }
+
+    public function setEquipo()
+    {
+        return $this->equipo;
+    }
 }

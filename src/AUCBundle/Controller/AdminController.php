@@ -32,9 +32,9 @@ class AdminController extends Controller
             $em->flush();
             // ... do any other work - like sending them an email, etc
             // maybe set a "flash" success message for the user
-            return $this->render('AUCBundle:Default:login.html.twig',array("form"=>$form->createView() ));
+            return $this->render('AUCBundle:Default:bienvenido.html.twig',array("form"=>$form->createView() ));
             //return new Response("Usuario registrado");
-            //return $this->render('FctBundle:Users:login.html.twig',array('form' => $form->createView()));
+            //return $this->render('AUCBundle:User:login.html.twig',array('form' => $form->createView()));
         }
         return $this->render('AUCBundle:Default:register.html.twig',array('form' => $form->createView()));
     }

@@ -1,50 +1,41 @@
-<?php
+<?php // Pear Mail Library
 
 namespace AUCBundle\Controller;
-
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Request;
+//
+// require_once('AUC/vendor/phpmailer/phpmailer/PHPMailerAutoload.php');
 
 class MailController extends Controller
 {
 
-  public function contactoAction(Request $request)
-  {
-    $this->get('request')->request->get('name');
-    $this->get('request')->request->get('apellidos');
-    $this->get('request')->request->get('mail');
-    $this->get('request')->request->get('asunto');
-    $this->get('request')->request->get('texto');
+  public function sendAction()
+ {
 
-      $message = \Swift_Message::newInstance()
-          ->setContentType("text/html")
-          ->setSubject('Hola')
-          ->setFrom('proyectounion@gmail.com')
+    $request=$this->getrequest(request $request);
+    if ($request->getMethod() == "POST") {
+      $nombre = $request->get('name');
+      $apellidos = $request->get('apellidos');
+      $email = $request->get('email');
+      $asunto = $request->get('asunto');
+      $mensaje = $request->get('mensaje');
+
+      $mailer = $this->container->get('mailer');
+      $transport = \Swift_SmtpTransport::newInstance('smtp@gmail.com', 465, 'ssl')
+          ->setUsername('proyectounion@gmail.com')
+          ->setPassword('961324786');
+          $mailer = \Swift_Mailer::newInstance($transport);
+          $message = \Swift_Message::newInstance('Test')
+          ->setSubject($nombre)
+          ->setFrom($email)
           ->setTo('proyectounion@gmail.com')
-          ->setBody(
-              $this->renderView(
-                  // app/Resources/views/Emails/registration.html.twig
-                  'Default/mail.html.twig',
-                  array('name' => $name, 'apellidos' => $apellidos, 'mail' => $mail, 'asunto' => $asunto, 'texto' => $texto,)
-              ),
-              'text/html'
-          )
-          /*
-           * If you also want to include a plaintext version of the message
-          ->addPart(
-              $this->renderView(
-                  'Emails/registration.txt.twig',
-                  array('name' => $name)
-              ),
-              'text/plain'
-          )
-          */
-      ;
-      $this->get('mensaje')->send($message);
+          ->setBody($message);
+          $this->get('mailer')->send($message);
+    }
 
-      return new Response();
+    return $this->render('AUCBundle:Default:contacto.html.twig');
+
   }
-
 }

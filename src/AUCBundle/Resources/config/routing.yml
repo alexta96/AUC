@@ -22,6 +22,10 @@ auc_noticia:
     path:     /noticia/{id}
     defaults: { _controller: AUCBundle:Noticia:noticia}
 
+auc_bienvenido:
+    path:     /bienvenido
+    defaults: { _controller: AUCBundle:Default:bienvenido }
+
 auc_register_admin:
     path:     admin/register
     defaults: { _controller: AUCBundle:Admin:register }
